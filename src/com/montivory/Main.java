@@ -7,24 +7,30 @@ public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        System.out.print("Please Input your score to grade calculate: ");
-        int score = sc.nextInt();
+        System.out.print("Please Input your accumulated score to grade calculate: ");
+        int accuScore = sc.nextInt();
+        System.out.print("Please Input your midpoint score to grade calculate: ");
+        int midScore = sc.nextInt();
+        System.out.print("Please Input your final score to grade calculate: ");
+        int finalScore = sc.nextInt();
 
-        if (score >= 0 && score <= 49) {
+        int totalScore = accuScore + midScore + finalScore;
+
+        if (totalScore >= 0 && totalScore <= 49) {
             System.out.println("Your grade is F");
-        } else if (score >= 50 && score <= 54) {
+        } else if (totalScore >= 50 && totalScore <= 54) {
             System.out.println("Your grade is D+");
-        } else if (score >= 55 && score <= 59) {
+        } else if (totalScore >= 55 && totalScore <= 59) {
             System.out.println("Your grade is D+");
-        } else if (score >= 60 && score <= 64) {
+        } else if (totalScore >= 60 && totalScore <= 64) {
             System.out.println("Your grade is C");
-        } else if (score >= 65 && score <= 69) {
+        } else if (totalScore >= 65 && totalScore <= 69) {
             System.out.println("Your grade is C+");
-        } else if (score >= 70 && score <= 74) {
+        } else if (totalScore >= 70 && totalScore <= 74) {
             System.out.println("Your grade is B");
-        } else if (score >= 75 && score <= 79) {
+        } else if (totalScore >= 75 && totalScore <= 79) {
             System.out.println("Your grade is B+");
-        } else if (score >= 80 && score <= 100) {
+        } else if (totalScore >= 80 && totalScore <= 100) {
             System.out.println("Your grade is A");
         } else {
             System.out.println("your score is invalid number");
